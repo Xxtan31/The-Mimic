@@ -16,7 +16,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 
 -- Tam ekranın ortasına bir Frame eklemek için bir ScreenGui oluşturun
 local gui = Instance.new("ScreenGui")
-gui.Parent = game.CoreGui
+gui.Parent = game:GetService("CoreGui")
  -- Ekranın içine sığdırmak için
 -- GUI oluşturma
 
@@ -457,6 +457,7 @@ end
 button.MouseButton1Click:Connect(closeFrame)
 
 frame.Parent = gui    button:TweenSize(originalSize, Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 0.2, true)
+end)
 
 local mouse = game.Players.LocalPlayer:GetMouse()
 
@@ -570,34 +571,36 @@ nofog.Text = "Nofog"
 nofog.Parent = frame
 
 -- TextBox oluşturun ve TextLabel'in yanına, biraz aşağıda yerleştirin
-local tpwalk = Instance.new("TextButton")
-textBox2.Name = "Enter BulletSpeed Max 300"
-textBox2.Parent = frame
-textBox2.Size = UDim2.new(0.5, 0, 0, 30)
-textBox2.Position = UDim2.new(0, 0, 0, 70) -- Biraz aşağıda
-textBox2.PlaceholderText = "Enter BulletSpeed Max 300"
+local tpwalk = tpwalk.new("TextButton")
+tpwalk.Name = "29₺)(#(#)`§{$${["
+tpwalk.Parent = frame
+tpwalk.Size = UDim2.new(0.5, 0, 0, 30)
+tpwalk.Position = UDim2.new(0, 0, 0, 70) -- Biraz aşağıda
+tpwalk.Text = "TpwalkSpeed"
 
 -- TextButton oluşturun ve TextLabel'in yanına, biraz aşağıda diğer yarısına yerleştirin
-local textButton2 = Instance.new("TextButton")
-textButton2.Size = UDim2.new(0.5, 0, 0, 30)
-textButton2.Position = UDim2.new(0.5, 0, 0, 70) -- Biraz aşağıda
-textButton2.Text = "Open All Esp"
-textButton2.Parent = frame
+local Esp = Instance.new("TextButton")
+Esp.Name = "kskm?₺)*)#?*???3(₺"
+Esp.Size = UDim2.new(0.5, 0, 0, 30)
+Esp.Position = UDim2.new(0.5, 0, 0, 70) -- Biraz aşağıda
+Esp.Text = "Esp Labirent"
+Esp.Parent = frame
 
 -- TextBox oluşturun ve TextLabel'in yanına, biraz daha aşağıda yerleştirin
-local textBox3 = Instance.new("TextBox")
-textBox3.Name = "Enter FireRate value, 600 very good"
-textBox3.Parent = frame
-textBox3.Size = UDim2.new(0.5, 0, 0, 30)
-textBox3.Position = UDim2.new(0, 0, 0, 105) -- Biraz daha aşağıda
-textBox3.PlaceholderText = "Enter FireRate value, 600 very good"
+local coinFarm = Instance.new("TextBox")
+coinFarm.Name = "92)₺(#)}€})!3?€]€)2)#)X"
+coinFarm.Parent = frame
+coinFarm.Size = UDim2.new(0.5, 0, 0, 30)
+coinFarm.Position = UDim2.new(0, 0, 0, 105) -- Biraz daha aşağıda
+coinFarm.Text = "CoinTp"
 
 -- TextButton oluşturun ve TextLabel'in yanına, biraz daha aşağıda diğer yarısına yerleştirin
-local textButton3 = Instance.new("TextButton")
-textButton3.Size = UDim2.new(0.5, 0, 0, 30)
-textButton3.Position = UDim2.new(0.5, 0, 0, 105) -- Biraz daha aşağıda
-textButton3.Text = "Aimbot"
-textButton3.Parent = frame
+local Ending = Instance.new("TextButton")
+Ending.Name = "~`|•√π÷×§∆£€¢¢°^{}\%]©[✓™®2(291)*?#/"
+Ending.Size = UDim2.new(0.5, 0, 0, 30)
+Ending.Position = UDim2.new(0.5, 0, 0, 105) -- Biraz daha aşağıda
+Ending.Text = "END TO CLİCK"
+Ending.Parent = frame
 
 -- Oyuncunun profil fotoğrafını al ve ImageLabel'de görüntüle
 local player = game.Players.LocalPlayer
@@ -658,3 +661,118 @@ end
 button.MouseButton1Click:Connect(closeFrame)
 
 frame.Parent = gui
+
+local function fbr()
+ local Light = game:GetService("Lighting")
+
+        function dofullbright()
+            Light.Ambient = Color3.new(1, 1, 1)
+            Light.ColorShift_Bottom = Color3.new(1, 1, 1)
+            Light.ColorShift_Top = Color3.new(1, 1, 1)
+        end
+
+        dofullbright()
+
+        Light.LightingChanged:Connect(dofullbright)
+end
+fb.MouseButton1Click:Connect(fbr)
+
+local function noofog()
+local lighting = game:GetService("Lighting")
+lighting.FogEnd = 100000
+
+for _, v in pairs(lighting:GetDescendants()) do
+    if v:IsA("Atmosphere") then
+        v:Destroy()
+    end
+end
+end
+nofog.MouseButton1Click:Connect(noofog)
+
+local function tpwalkspeeed()
+local RunService = game:GetService("RunService")
+local hb = RunService.Heartbeat
+local speaker = game.Players.LocalPlayer
+
+function isNumber(str)
+    if tonumber(str) ~= nil or str == 'inf' then
+        return true
+    end
+end
+
+local args = {...}
+
+tpwalking = true
+    local chr = speaker.Character
+    local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
+    while tpwalking and chr and hum and hum.Parent do
+        local delta = hb:Wait()
+        if hum.MoveDirection.Magnitude > 0 then
+            if args[1] and isNumber(args[1]) then
+                chr:TranslateBy(hum.MoveDirection * tonumber(args[1]) * delta * 10)
+            else
+                chr:TranslateBy(hum.MoveDirection * delta * 20)
+            end
+        end
+end
+end
+tpwalk.MouseButton1Click:Connect(tpwalkspeeed)
+
+local function EsP()
+--labirent maze
+function CreateSG(name, parent, face)
+    local SurfaceGui = Instance.new("SurfaceGui", parent)
+    SurfaceGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    SurfaceGui.Face = Enum.NormalId[face]
+    SurfaceGui.LightInfluence = 0
+    SurfaceGui.ResetOnSpawn = false
+    SurfaceGui.Name = name
+    SurfaceGui.AlwaysOnTop = true
+
+    local Frame = Instance.new("Frame", SurfaceGui)
+    Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)  -- Kırmızı renk
+    Frame.BackgroundTransparency = 0.3
+    Frame.Size = UDim2.new(1, 0, 1, 0)
+end
+
+while wait(1) do
+    local ww = game.Workspace.Section1.Maze.GrinDemonNM.Hitbox
+
+    if ww then
+            CreateSG("cham", ww, "Back")
+            CreateSG("cham", ww, "Front")
+            CreateSG("cham", ww, "Left")
+            CreateSG("cham", ww, "Right")
+            CreateSG("cham", ww, "Right")
+            CreateSG("cham", ww, "Top")
+            CreateSG("cham", ww, "Bottom")
+        end
+end
+end
+Esp.MouseButton1Click:Connect(EsP)
+
+local function coinFaRm()
+local yenss = game.Workspace.MimicCurrencySpawns.Yen:WaitForChild("YenCoin")
+local player = game.Players.LocalPlayer
+local character = player.Character
+local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+
+if yenss then
+humanoidRootPart.CFrame = CFrame.new(yenss.Position)
+end
+end
+coinFarm.MouseButton1Click:Connect(coinFaRm)
+
+local function Ends()
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+        local targetPosition = Vector3.new(-1704, 88, 7770)
+
+local function tpPlayer(player)
+ local targetTp = humanoid.Parent:SetPrimaryPartCFrame(CFrame.new(targetPosition))
+end
+ 
+ if targetTp then
+ tpPlayer()
+end
+Ending.MouseButton1Click:Connect(Ends)
+end
