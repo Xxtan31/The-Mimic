@@ -774,4 +774,3 @@ end
  tpPlayer()
 end
 Ending.MouseButton1Click:Connect(Ends)
-end
