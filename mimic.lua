@@ -457,7 +457,6 @@ end
 button.MouseButton1Click:Connect(closeFrame)
 
 frame.Parent = gui    button:TweenSize(originalSize, Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 0.2, true)
-end
 
 local mouse = game.Players.LocalPlayer:GetMouse()
 
