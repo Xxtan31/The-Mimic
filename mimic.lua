@@ -16,7 +16,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 
 -- Tam ekranın ortasına bir Frame eklemek için bir ScreenGui oluşturun
 local gui = Instance.new("ScreenGui")
-gui.Parent = game:GetService("CoreGui")
+gui.Parent = game.CoreGui
  -- Ekranın içine sığdırmak için
 -- GUI oluşturma
 
@@ -457,7 +457,6 @@ end
 button.MouseButton1Click:Connect(closeFrame)
 
 frame.Parent = gui    button:TweenSize(originalSize, Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 0.2, true)
-end)
 
 local mouse = game.Players.LocalPlayer:GetMouse()
 
